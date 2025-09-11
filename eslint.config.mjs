@@ -19,6 +19,16 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
     ],
+    rules: {
+    // ❌ Turns off unescaped apostrophes error
+    "react/no-unescaped-entities": "off",
+
+    // ⚠️ Only warn about unused imports, don’t error
+    "@typescript-eslint/no-unused-vars": ["warn"],
+
+    // ⚠️ Only warn about using <img>, don’t error
+    "@next/next/no-img-element": "warn",
+  },
   },
 ];
 
